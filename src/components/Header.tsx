@@ -23,7 +23,7 @@ export default function VersatileHeaderPage() {
               className="font-black text-[16px] md:text-[18px] leading-[100%] tracking-[0%]"
               style={{ fontFamily: "Orbitron" }}
             >
-              VERSATILE.IO
+              VERSATILE.ID
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-8 font-bold text-[16px] md:text-[18px]">
