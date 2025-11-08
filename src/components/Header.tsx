@@ -20,7 +20,7 @@ export default function VersatileHeaderPage() {
               />
             </div>
             <div
-              className="font-black text-[16px] md:text-[18px] leading-[100%] tracking-[0%]"
+              className="font-black text-[16px] md:text-[16px] leading-[100%] tracking-[0%]"
               style={{ fontFamily: "Orbitron" }}
             >
               VERSATILE.ID
@@ -76,7 +76,7 @@ export default function VersatileHeaderPage() {
       </header>
 
       <div className="mt-8 sm:mt-10">
-        <span className="block font-medium text-[18px] sm:text-[22px] leading-[120%] text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DDAFCE] to-[#684BAB] pl-0 sm:pl-[30px] md:pl-[50px]">
+        <span className="font-medium text-[22px] leading-[100%] tracking-[0%] text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DDAFCE] to-[#684BAB]  pl-0 sm:pl-[30px] md:pl-[50px]">
           Welcome back to Versatile ID hub,
         </span>
       </div>

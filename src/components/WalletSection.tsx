@@ -16,7 +16,7 @@ const WalletSection = ({ title, labels }: ICard) => {
               height={12}
               width={7}
             />
-            <span className="text-white-400 text-md">{item}</span>
+            <span className="text-white-400 text-[18px] leading-[100%] tracking-[0%]">{item}</span>
           </div>
         ))}
       </div>

@@ -22,7 +22,7 @@ export default function StatusCard() {
           >
             <div className="flex items-center space-x-3">
               <Image src={item.icon} alt={item.label} height={22} width={25} />
-              <span>{item.label}</span>
+              <span className="text-white-400 text-[20px] leading-[100%] tracking-[0%]">{item.label}</span>
             </div>
             <span className="text-white-700 font-bold">{item.value}</span>
           </div>

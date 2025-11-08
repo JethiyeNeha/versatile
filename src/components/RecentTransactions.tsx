@@ -10,7 +10,7 @@ export default function RecentTransactions() {
         <div className="flex items-center gap-3 mb-10 -ml-2">
           <Image
             src="/assets/icons/recent_transactions.png"
-            alt="insights"
+            alt="transactions"
             height={29}
             width={29}
           />
@@ -27,7 +27,7 @@ export default function RecentTransactions() {
             >
               <div className="flex items-center gap-4 h-[67px]">
                 <div>
-                  <Image src={c.icon} alt="up" height={22} width={27} />
+                  <Image src={c.icon} alt={c.symbol} height={22} width={27} />
                 </div>
                 <div>
                   <div className="font-bold text-[18px] ">{c.symbol}</div>
@@ -49,7 +49,7 @@ export default function RecentTransactions() {
           >
             <Image
               src="/assets/icons/all_transactions.png"
-              alt="up"
+              alt="transactions"
               height={18}
               width={18}
             />
