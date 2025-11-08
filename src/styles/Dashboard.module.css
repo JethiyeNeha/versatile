@@ -1,0 +1,48 @@
+.main {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.topSection {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: calc((450 / 1240) * 100%) calc((715 / 1240) * 100%);
+}
+.middleSection {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: calc((450 / 1240) * 100%) calc((345 / 1240) * 100%) calc(
+      (345 / 1240) * 100%
+    );
+}
+.bottomSection {
+  display: grid;
+  gap: 32px;
+    grid-template-columns: calc((450 / 1240) * 100%) calc((715 / 1240) * 100%);
+}
+.cardBackground {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background-image: linear-gradient(#0a0a0a, #0a0a0a),
+    linear-gradient(90.11deg, #6f6f6f 0.1%, #4a3872 50.48%, #de89c3 99.9%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: inset 8px 5px 47.2px 0px #671f6896;
+}
+
+.gradientCard {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 40px;
+  color: #ffffff;
+  background-color: #000000;
+  background-image:
+    linear-gradient(#0a0a0a, #0a0a0a),
+    linear-gradient(90.11deg, #6F6F6F 0.1%, #4A3872 50.48%, #DE89C3 99.9%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 16px;
+  height: 602px;
+}
+
