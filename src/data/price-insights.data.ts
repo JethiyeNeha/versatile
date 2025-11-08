@@ -1,6 +1,6 @@
-import { Coin } from "@/app/models/coin.interface";
+import { ICoin } from "@/app/models/coin.interface";
 
-export const coins: Coin[] = [
+export const coins: ICoin[] = [
   {
     id: "avax",
     symbol: "AVAX",

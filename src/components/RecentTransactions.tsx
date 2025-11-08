@@ -1,4 +1,4 @@
-import { coins } from "@/data/price-insights.data";
+
 import { transactions } from "@/data/transactions.data";
 import Image from "next/image";
 import styles from "@/styles/Dashboard.module.css";
