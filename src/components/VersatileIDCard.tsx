@@ -44,7 +44,7 @@ export default function VersatileIDCard() {
         <div className="text-[14px] text-white-400 font-normal leading-[100%] tracking-[0%]">
           W3ID
         </div>
-        <div className="font-normal text-[32px] leading-[100%] tracking-[20%] font-mono mt-4 mb-10">
+        <div className="font-normal text-[26px] leading-[100%] tracking-[20%] font-mono mt-4 mb-10 lg:text-[32px]">
           3673&nbsp;4154&nbsp;8578
         </div>
       </div>
