@@ -2,17 +2,32 @@ import Image from "next/image";
 
 export default function VersatileIDCard() {
   return (
-    <div
+<div
       className="rounded-[26px] py-6 pl-12 pr-6 text-white bg-black h-[264px] flex flex-col justify-between [box-shadow:inset_-10px_10px_20px_rgba(0,0,0,0.8),inset_10px_-10px_15px_rgba(255,255,255,0.1)]"
-      style={{
-        border: "1px solid transparent",
-        borderRadius: "16px",
-        backgroundImage:
-          "linear-gradient(#0a0a0a, #0a0a0a),linear-gradient(90.11deg, #28143B 0.11%, #671F68 99.91%)",
-        backgroundOrigin: "border-box",
-        backgroundClip: "padding-box, border-box",
-      }}
-    >
+  style={{
+    border: "1px solid transparent",
+    borderRadius: "26px",
+    backgroundImage: `
+      linear-gradient(#0a0a0a, #0a0a0a), /* inner solid background */
+      linear-gradient(90.11deg, #28143B 0.11%, #671F68 99.91%) /* border gradient */
+    `,
+    backgroundOrigin: "border-box",
+    backgroundClip: "padding-box, border-box",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      borderRadius: "inherit",
+      background:
+        "radial-gradient(circle at 8% 92%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.06) 8%, rgba(255,255,255,0) 30%)",
+      pointerEvents: "none",
+      zIndex: 0,
+    }}
+  />
       <div className="flex justify-between items-center">
         <div className="font-normal text-[13px] leading-[100%] tracking-[-2%] font-mono">
           Secured by L4 | Versatile ID

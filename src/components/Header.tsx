@@ -1,12 +1,16 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function VersatileHeaderPage() {
   const activeLink = "Home";
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="bg-black text-white px-[50px] pb-[30px]">
+    <div className="bg-black text-white px-6 sm:px-8 md:px-[50px] pb-[30px]">
       <header>
-        <div className="px-[50px] py-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between py-4 md:py-6">
+          <div className="flex items-center gap-3 md:pl-[50px]">
             <div>
               <Image
                 src="/assets/images/logo.png"
@@ -16,14 +20,13 @@ export default function VersatileHeaderPage() {
               />
             </div>
             <div
-              className="font-black text-[16px] leading-[100%] tracking-[0%] align-middle"
+              className="font-black text-[16px] md:text-[18px] leading-[100%] tracking-[0%]"
               style={{ fontFamily: "Orbitron" }}
             >
               VERSATILE.IO
             </div>
           </div>
-
-          <nav className="flex items-center gap-8 font-bold text-[18px] leading-[100%] tracking-[0%]">
+          <nav className="hidden md:flex items-center gap-8 font-bold text-[16px] md:text-[18px]">
             {["Home", "Profile"].map((link) => (
               <a key={link} className="relative py-2 px-3">
                 {link}
@@ -39,12 +42,41 @@ export default function VersatileHeaderPage() {
               </a>
             ))}
           </nav>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden focus:outline-none"
+          >
+            <div className="space-y-1.5">
+              <span className="block w-6 h-[2px] bg-white"></span>
+              <span className="block w-6 h-[2px] bg-white"></span>
+              <span className="block w-6 h-[2px] bg-white"></span>
+            </div>
+          </button>
         </div>
-        <div className="border-t border-white" />
+
+        <div className="border-t border-white/30" />
+
+        {menuOpen && (
+          <div className="flex flex-col items-start gap-4 py-4 md:hidden">
+            {["Home", "Profile"].map((link) => (
+              <a
+                key={link}
+                className={`relative py-1 px-2 text-[16px] font-medium ${
+                  activeLink === link
+                    ? "bg-gradient-to-r from-[#4A3872] to-[#DE89C3] bg-clip-text text-transparent"
+                    : ""
+                }`}
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        )}
       </header>
 
-      <div className="mt-3 ">
-        <span className="font-medium text-[22px] leading-[100%] tracking-[0%] text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DDAFCE] to-[#684BAB] pl-[50px]">
+      <div className="mt-8 sm:mt-10">
+        <span className="block font-medium text-[18px] sm:text-[22px] leading-[120%] text-transparent bg-clip-text bg-gradient-to-r from-white via-[#DDAFCE] to-[#684BAB] pl-0 sm:pl-[30px] md:pl-[50px]">
           Welcome back to Versatile ID hub,
         </span>
       </div>
